@@ -8,6 +8,9 @@ import AddDompetForm from '../component/forms/add_dompet_form';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeNavigator from './HomeStack';
 import DompetKuStack from './DompetkuStack';
+import Calculator from '../component/calculator';
+import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -23,11 +26,15 @@ const TabNavigator = () => {
                 if (route.name === 'Home') {
                 iconName = focused
                     ? require('../../assets/HomeFocused.png')
-                    : require('../../assets/HomeNotFocused.png');
+                    : require('../../assets/Home.png');
                 } else if (route.name === 'Dompetku') {
                 iconName = focused
-                    ? require('../../assets/DompetkuFocused.png')
-                    : require('../../assets/DompetkuNotFocused.png');
+                    ? require('../../assets/DompetFocused.png')
+                    : require('../../assets/Dompet.png');
+                }else if (route.name === 'Calculator'){
+                    iconName = focused
+                    ? require('../../assets/CalculatorFocused.png')
+                    : require('../../assets/Calculator.png')
                 }
                 return (
                 <Image source={iconName} style={{width: size, height: size}} />
@@ -36,7 +43,7 @@ const TabNavigator = () => {
             })}>
             <Tab.Screen name="Home" component={HomeNavigator} options={{ headerShown: false }}/>
             <Tab.Screen name="Dompetku" component={DompetKuStack} options={{ headerShown: false }}/>
-            {/* <Tab.Screen name="Add Dompet" component={AddDompetForm}/> */}
+            <Tab.Screen name="Calculator" component={Calculator}/>
         </Tab.Navigator>
     </NavigationContainer>
   )

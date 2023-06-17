@@ -26,3 +26,9 @@ export interface IForm{
     nominal: number,
     deskripsi: string
 }
+
+export interface ICalculator{
+    targetNominal: string,
+    targetWaktu: string,
+    nominalSekarang: string,
+}
