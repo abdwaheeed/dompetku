@@ -2,9 +2,9 @@
 
 Prerequisite:
 
-Node.js
-Npm
-Visual Studio Code
+Node.js,
+Npm,
+Visual Studio Code,
 Android Studio / Physical Device
 
 Make sure you have set up the development environment first. You can read it here: https://reactnative.dev/docs/environment-setup.
